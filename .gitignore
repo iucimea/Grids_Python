@@ -1,3 +1,7 @@
 # Heavy Files
 *.3ds
 *.npy
+
+# Pycache folder
+__pycache__/
+

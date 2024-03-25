@@ -1,26 +1,12 @@
-#!/usr/bin/env python
-# coding: utf-8
+### Importing the Libraries
 
-# In[1]:
+import nanonis_library
+import main_functions
+import median_filtering
 
-
-get_ipython().run_line_magic('qtconsole', '')
-
-
-# # Importing the Libraries
-
-# In[1]:
-
-
-get_ipython().run_line_magic('run', 'nanonis_library')
-get_ipython().run_line_magic('run', 'main_functions.ipynb')
-get_ipython().run_line_magic('run', 'median_filtering.ipynb')
-
-
-# # Extracting spectroscopic Data
-
-# In[13]:
-
+#%% Extracting spectroscopic Data
+ 
+#
 
 file = "grid-spectroscopy004"
 file_name = '{}.3ds'.format(file)
@@ -42,26 +28,18 @@ energy_axis = linspace(bias_start, bias_end, num_points)               #finding 
 print("number of points in spectroscopy:", num_points,"\nBias_Start:",bias_start,"\nBias_End:", bias_end, "\nnumber of points in x:",x_points,"\nnumber of points in y:", y_points, "\nLenght in x:",len_x,'nm',"\nLenght in y:",len_y,'nm')
 
 
-# # Import widgets
+#%% Import widgets
 
-# In[14]:
-
-
-get_ipython().run_line_magic('run', 'widgets.ipynb')
+import widgets
 
 
-# # Read params
-
-# In[22]:
+#%% Read params
 
 
-params = {'len_x':len_x, 'len_y': len_y, 'x_points':x_points , 'y_points': y_points, 'bias_start':bias_start,
-          'bias_end':bias_end, 'num_points': num_points, 'slope_corrected_topography' : slope_corrected_topography}
+params = {'len_x':len_x, 'len_y': len_y, 'x_points':x_points , 'y_points': y_points, 'bias_start':bias_start, 'bias_end':bias_end, 'num_points': num_points}
 
 
-# # Median filtering
-
-# In[16]:
+#%% Median filtering
 
 
 def median_filtering_map(data, energy, n, m_tresh, params):

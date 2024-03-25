@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # # Widgets
-
-# In[ ]:
 
 
 btn_0 = widgets.Button(description='Save')

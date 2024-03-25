@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # # Main functions
-
-# In[ ]:
 
 
 def index_of_energy (energy, params):
